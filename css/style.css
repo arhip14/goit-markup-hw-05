@@ -545,5 +545,5 @@ body {
   bottom: 0;
   background-color: var(--btn--hover--color);
   border-radius: 2px;
-  bottom: -1px;
+  bottom: 0;
 }
