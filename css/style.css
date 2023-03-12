@@ -311,6 +311,7 @@ body {
 .portfolio-item-link {
   text-decoration: none;
   display: block;
+  position: relative;
 }
 .portfolio-item-link:hover , .portfolio-item-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -443,4 +444,64 @@ body {
 }
 .svg-logo {
   fill: currentColor;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  transition: opasity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+}
+.modal {
+  position: absolute;
+  width: 408px;
+  height: 576px;
+  background: #FCFCFC;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: #E7E9FC;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  width:24px ;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color  var(--transition-dur-and-func);
+}
+.modal-close-btn:hover , .modal-close-btn:focus {
+  background-color: var(--btn--hover--color);
+  fill: var(--btn-hero-color);
+}
+.modal-close-btn-icon {
+  transition:fill var(--transition-dur-and-func)
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.overlay {
+  background-color: #31D0AA;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 40px;
+  padding-bottom:164px ;
+  position: absolute;
+
 }
