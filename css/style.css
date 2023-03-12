@@ -529,6 +529,7 @@ body {
 }
 .portfolio-item-link:hover .overlay , .portfolio-item-link:focus .overlay {
   transform: translate(0, 0);
+  transition: color 250ms cubic-bezier(0.4 , 0 , 0.2 , 1);
 }
 .header-link {
   position: relative;
